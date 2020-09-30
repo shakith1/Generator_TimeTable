@@ -16,14 +16,14 @@ import service.DBConnect;
  *
  * @author Shakith
  */
-public class consecutive_sessions extends javax.swing.JPanel {
+public class not_overlap_sessions extends javax.swing.JPanel {
 
     Generator generator;
 
     /**
-     * Creates new form consecutive_sessions
+     * Creates new form not_overlap_sessions
      */
-    public consecutive_sessions() {
+    public not_overlap_sessions() {
         initComponents();
 
         Font font = new Font("Verdana", Font.BOLD, 14);
@@ -42,7 +42,7 @@ public class consecutive_sessions extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        consecutive_sessions = new javax.swing.JPanel();
+        not_overlap_sessions = new javax.swing.JPanel();
         jPanel40 = new javax.swing.JPanel();
         jLabel114 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
@@ -50,7 +50,7 @@ public class consecutive_sessions extends javax.swing.JPanel {
         jTable2 = new javax.swing.JTable();
         jLabel71 = new javax.swing.JLabel();
 
-        consecutive_sessions.setBackground(new java.awt.Color(102, 51, 109));
+        not_overlap_sessions.setBackground(new java.awt.Color(102, 51, 109));
 
         jPanel40.setBackground(new java.awt.Color(135, 19, 135));
         jPanel40.setPreferredSize(new java.awt.Dimension(1592, 109));
@@ -68,7 +68,7 @@ public class consecutive_sessions extends javax.swing.JPanel {
 
         jLabel115.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         jLabel115.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel115.setText("Consecutive Sessions");
+        jLabel115.setText("Not Overlap Sessions");
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
@@ -79,7 +79,7 @@ public class consecutive_sessions extends javax.swing.JPanel {
                 .addComponent(jLabel114)
                 .addGap(519, 519, 519)
                 .addComponent(jLabel115)
-                .addContainerGap(646, Short.MAX_VALUE))
+                .addContainerGap(642, Short.MAX_VALUE))
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,7 +100,7 @@ public class consecutive_sessions extends javax.swing.JPanel {
 
             },
             new String [] {
-                "ID", "Group", "Session 1", "Session 2", "Session 3"
+                "ID", "Batch", "Session 1", "Session 2", "Session 3"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -127,26 +127,26 @@ public class consecutive_sessions extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout consecutive_sessionsLayout = new javax.swing.GroupLayout(consecutive_sessions);
-        consecutive_sessions.setLayout(consecutive_sessionsLayout);
-        consecutive_sessionsLayout.setHorizontalGroup(
-            consecutive_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(consecutive_sessionsLayout.createSequentialGroup()
+        javax.swing.GroupLayout not_overlap_sessionsLayout = new javax.swing.GroupLayout(not_overlap_sessions);
+        not_overlap_sessions.setLayout(not_overlap_sessionsLayout);
+        not_overlap_sessionsLayout.setHorizontalGroup(
+            not_overlap_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(not_overlap_sessionsLayout.createSequentialGroup()
                 .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 2536, Short.MAX_VALUE))
-            .addGroup(consecutive_sessionsLayout.createSequentialGroup()
-                .addGroup(consecutive_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(consecutive_sessionsLayout.createSequentialGroup()
+            .addGroup(not_overlap_sessionsLayout.createSequentialGroup()
+                .addGroup(not_overlap_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(not_overlap_sessionsLayout.createSequentialGroup()
                         .addGap(784, 784, 784)
                         .addComponent(jLabel71))
-                    .addGroup(consecutive_sessionsLayout.createSequentialGroup()
+                    .addGroup(not_overlap_sessionsLayout.createSequentialGroup()
                         .addGap(210, 210, 210)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1166, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        consecutive_sessionsLayout.setVerticalGroup(
-            consecutive_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(consecutive_sessionsLayout.createSequentialGroup()
+        not_overlap_sessionsLayout.setVerticalGroup(
+            not_overlap_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(not_overlap_sessionsLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85)
@@ -161,13 +161,13 @@ public class consecutive_sessions extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(consecutive_sessions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(not_overlap_sessions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(consecutive_sessions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(not_overlap_sessions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -191,35 +191,35 @@ public class consecutive_sessions extends javax.swing.JPanel {
     private void jLabel71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel71MouseClicked
         // TODO add your handling code here:
         generator.Parent.removeAll();
-        generator.Parent.add(new add_consecutive_sessions());
+        generator.Parent.add(new add_not_overlap_sessions());
         generator.Parent.repaint();
         generator.Parent.revalidate();
     }//GEN-LAST:event_jLabel71MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel consecutive_sessions;
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JPanel jPanel40;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
+    private javax.swing.JPanel not_overlap_sessions;
     // End of variables declaration//GEN-END:variables
 
     public void loadData() {
         try {
             DefaultTableModel dtm = (DefaultTableModel) jTable2.getModel();
-            String qry = "SELECT * FROM consecutive_sessions";
+            String qry = "SELECT * FROM not_overlap_sessions";
             ResultSet rs = DBConnect.search(qry);
             dtm.setRowCount(0);
             while (rs.next()) {
                 Vector v = new Vector();
-                v.add(rs.getString("consecutive_sessions.id"));
-                v.add(rs.getString("consecutive_sessions.group"));
-                v.add(rs.getString("consecutive_sessions.session_1"));
-                v.add(rs.getString("consecutive_sessions.session_2"));
-                v.add(rs.getString("consecutive_sessions.session_3"));
+                v.add(rs.getString("not_overlap_sessions.id"));
+                v.add(rs.getString("not_overlap_sessions.batch"));
+                v.add(rs.getString("not_overlap_sessions.session_1"));
+                v.add(rs.getString("not_overlap_sessions.session_2"));
+                v.add(rs.getString("not_overlap_sessions.session_3"));
                 dtm.addRow(v);
             }
             for (int i = 0; i < jTable2.getColumnCount(); i++) {

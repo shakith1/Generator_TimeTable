@@ -9,24 +9,24 @@ import java.awt.Label;
 import java.sql.ResultSet;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 import service.DBConnect;
 
 /**
  *
  * @author Shakith
  */
-public class add_consecutive_sessions extends javax.swing.JPanel {
+public class add_parellel_sessions extends javax.swing.JPanel {
 
     Generator generator;
 
     int id;
 
     /**
-     * Creates new form add_consecutive_sessions
+     * Creates new form add_parellel_sessions
      */
-    public add_consecutive_sessions() {
+    public add_parellel_sessions() {
         initComponents();
+
         loadCombo1();
         loadId();
         jLabel41.setVisible(false);
@@ -46,7 +46,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        add_consecutive_sessions = new javax.swing.JPanel();
+        add_parellel_sessions = new javax.swing.JPanel();
         jPanel40 = new javax.swing.JPanel();
         jLabel114 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
@@ -64,7 +64,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
         jComboBox4 = new javax.swing.JComboBox<>();
         jButton11 = new javax.swing.JButton();
 
-        add_consecutive_sessions.setBackground(new java.awt.Color(102, 51, 109));
+        add_parellel_sessions.setBackground(new java.awt.Color(102, 51, 109));
 
         jPanel40.setBackground(new java.awt.Color(135, 19, 135));
         jPanel40.setPreferredSize(new java.awt.Dimension(1592, 109));
@@ -82,7 +82,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
 
         jLabel115.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         jLabel115.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel115.setText("Add Consecutive Sessions");
+        jLabel115.setText("Add Parellel Sessions");
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
@@ -93,7 +93,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
                 .addComponent(jLabel114)
                 .addGap(448, 448, 448)
                 .addComponent(jLabel115)
-                .addContainerGap(650, Short.MAX_VALUE))
+                .addContainerGap(714, Short.MAX_VALUE))
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,7 +110,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
 
         jLabel42.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setText("No of Consecutive Sessions");
+        jLabel42.setText("No of Parellel Sessions");
         jPanel22.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
 
         jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -163,7 +163,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
 
         jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel44.setText("Group");
+        jLabel44.setText("Batch");
         jPanel22.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
 
         jTextField3.setBorder(null);
@@ -243,21 +243,21 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
         });
         jPanel22.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 520, 99, 41));
 
-        javax.swing.GroupLayout add_consecutive_sessionsLayout = new javax.swing.GroupLayout(add_consecutive_sessions);
-        add_consecutive_sessions.setLayout(add_consecutive_sessionsLayout);
-        add_consecutive_sessionsLayout.setHorizontalGroup(
-            add_consecutive_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(add_consecutive_sessionsLayout.createSequentialGroup()
+        javax.swing.GroupLayout add_parellel_sessionsLayout = new javax.swing.GroupLayout(add_parellel_sessions);
+        add_parellel_sessions.setLayout(add_parellel_sessionsLayout);
+        add_parellel_sessionsLayout.setHorizontalGroup(
+            add_parellel_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(add_parellel_sessionsLayout.createSequentialGroup()
                 .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 175, Short.MAX_VALUE))
-            .addGroup(add_consecutive_sessionsLayout.createSequentialGroup()
+            .addGroup(add_parellel_sessionsLayout.createSequentialGroup()
                 .addGap(297, 297, 297)
                 .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, 943, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        add_consecutive_sessionsLayout.setVerticalGroup(
-            add_consecutive_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(add_consecutive_sessionsLayout.createSequentialGroup()
+        add_parellel_sessionsLayout.setVerticalGroup(
+            add_parellel_sessionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(add_parellel_sessionsLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70)
@@ -270,21 +270,21 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(add_consecutive_sessions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(add_parellel_sessions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(add_consecutive_sessions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 275, Short.MAX_VALUE))
+                .addComponent(add_parellel_sessions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel114MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel114MouseClicked
         // TODO add your handling code here:
         generator.Parent.removeAll();
-        generator.Parent.add(new consecutive_sessions());
+        generator.Parent.add(new parellel_sessions());
         generator.Parent.repaint();
         generator.Parent.revalidate();
     }//GEN-LAST:event_jLabel114MouseClicked
@@ -292,54 +292,6 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
     private void jLabel114MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel114MouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel114MouseEntered
-
-    private void jComboBox1PopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox1PopupMenuWillBecomeVisible
-        // TODO add your handling code here:
-        if ("Select...".equals(jComboBox1.getItemAt(0))) {
-            jComboBox1.removeItemAt(0);
-        }
-        if ("Select...".equals(jComboBox1.getItemAt(jComboBox1.getItemCount() - 1))) {
-            jComboBox1.removeItemAt(jComboBox1.getItemCount() - 1);
-        }
-    }//GEN-LAST:event_jComboBox1PopupMenuWillBecomeVisible
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-
-        try {
-            if (jComboBox4.getSelectedItem().toString().equals("Select...") && jComboBox1.getSelectedItem().toString().equals("Select...")) {
-                DBConnect.iud("INSERT INTO consecutive_sessions VALUES('" + id + "','" + jComboBox2.getSelectedItem().toString() + "','" + jComboBox3.getSelectedItem().toString() + "','" + "N/A" + "','" + "N/A" + "')");
-            } else if (jComboBox1.getSelectedItem().toString().equals("Select...")) {
-                DBConnect.iud("INSERT INTO consecutive_sessions VALUES('" + id + "','" + jComboBox2.getSelectedItem().toString() + "','" + jComboBox3.getSelectedItem().toString() + "','" + jComboBox4.getSelectedItem().toString() + "','" + "N/A" + "')");
-            } else {
-                DBConnect.iud("INSERT INTO consecutive_sessions VALUES('" + id + "','" + jComboBox2.getSelectedItem().toString() + "','" + jComboBox3.getSelectedItem().toString() + "','" + jComboBox4.getSelectedItem().toString() + "','" + jComboBox1.getSelectedItem().toString() + "')");
-            }
-
-            JOptionPane pane = new JOptionPane(new Label("Details added successfully"), JOptionPane.INFORMATION_MESSAGE);
-            JDialog dialog = pane.createDialog("Data Saved");
-            dialog.setModal(true);
-            dialog.setVisible(true);
-
-            //JOptionPane.showMessageDialog(this, "Data Saved", "Details added successfully", JOptionPane.INFORMATION_MESSAGE);
-            generator.Parent.removeAll();
-            generator.Parent.add(new consecutive_sessions());
-            generator.Parent.repaint();
-            generator.Parent.revalidate();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane pane = new JOptionPane(new Label("Details not added successfully"), JOptionPane.INFORMATION_MESSAGE);
-            JDialog dialog = pane.createDialog("Data Not Saved");
-            dialog.setModal(true);
-            dialog.setVisible(true);
-
-            //JOptionPane.showMessageDialog(this, "Data Not Saved", "Details Not successfully", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jComboBox2PopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox2PopupMenuWillBecomeVisible
         // TODO add your handling code here:
@@ -355,6 +307,11 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
+    private void jComboBox2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jComboBox2PropertyChange
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2PropertyChange
+
     private void jComboBox3PopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox3PopupMenuWillBecomeVisible
         // TODO add your handling code here:
         if ("Select...".equals(jComboBox3.getItemAt(0))) {
@@ -368,48 +325,6 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
-
-    private void jTextField3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyTyped
-        // TODO add your handling code here:
-        if (!(Character.isDigit(evt.getKeyChar()))) {
-            evt.consume();
-        }
-        if (jTextField3.getText().length() == 1) {
-            evt.consume();
-        }
-
-
-    }//GEN-LAST:event_jTextField3KeyTyped
-
-    private void jComboBox4PopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox4PopupMenuWillBecomeVisible
-        // TODO add your handling code here:
-        if ("Select...".equals(jComboBox4.getItemAt(0))) {
-            jComboBox4.removeItemAt(0);
-        }
-        if ("Select...".equals(jComboBox4.getItemAt(jComboBox4.getItemCount() - 1))) {
-            jComboBox4.removeItemAt(jComboBox4.getItemCount() - 1);
-        }
-    }//GEN-LAST:event_jComboBox4PopupMenuWillBecomeVisible
-
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
-
-    private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
-        // TODO add your handling code here:
-
-
-    }//GEN-LAST:event_jTextField3KeyReleased
-
-    private void jTextField3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyPressed
-        // TODO add your handling code here:
-        try {
-            if (Integer.parseInt(jTextField3.getText()) > 3) {
-                jTextField3.setText("");
-            }
-        } catch (Exception e) {
-        }
-    }//GEN-LAST:event_jTextField3KeyPressed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
@@ -445,14 +360,97 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void jComboBox2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jComboBox2PropertyChange
-
+    private void jTextField3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2PropertyChange
+        try {
+            if (Integer.parseInt(jTextField3.getText()) > 3) {
+                jTextField3.setText("");
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jTextField3KeyPressed
+
+    private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jTextField3KeyReleased
+
+    private void jTextField3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyTyped
+        // TODO add your handling code here:
+        if (!(Character.isDigit(evt.getKeyChar()))) {
+            evt.consume();
+        }
+        if (jTextField3.getText().length() == 1) {
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_jTextField3KeyTyped
+
+    private void jComboBox1PopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox1PopupMenuWillBecomeVisible
+        // TODO add your handling code here:
+        if ("Select...".equals(jComboBox1.getItemAt(0))) {
+            jComboBox1.removeItemAt(0);
+        }
+        if ("Select...".equals(jComboBox1.getItemAt(jComboBox1.getItemCount() - 1))) {
+            jComboBox1.removeItemAt(jComboBox1.getItemCount() - 1);
+        }
+    }//GEN-LAST:event_jComboBox1PopupMenuWillBecomeVisible
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jComboBox4PopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox4PopupMenuWillBecomeVisible
+        // TODO add your handling code here:
+        if ("Select...".equals(jComboBox4.getItemAt(0))) {
+            jComboBox4.removeItemAt(0);
+        }
+        if ("Select...".equals(jComboBox4.getItemAt(jComboBox4.getItemCount() - 1))) {
+            jComboBox4.removeItemAt(jComboBox4.getItemCount() - 1);
+        }
+    }//GEN-LAST:event_jComboBox4PopupMenuWillBecomeVisible
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            if (jComboBox4.getSelectedItem().toString().equals("Select...") && jComboBox1.getSelectedItem().toString().equals("Select...")) {
+                DBConnect.iud("INSERT INTO parellel_sessions VALUES('" + id + "','" + jComboBox2.getSelectedItem().toString() + "','" + jComboBox3.getSelectedItem().toString() + "','" + "N/A" + "','" + "N/A" + "')");
+            } else if (jComboBox1.getSelectedItem().toString().equals("Select...")) {
+                DBConnect.iud("INSERT INTO parellel_sessions VALUES('" + id + "','" + jComboBox2.getSelectedItem().toString() + "','" + jComboBox3.getSelectedItem().toString() + "','" + jComboBox4.getSelectedItem().toString() + "','" + "N/A" + "')");
+            } else {
+                DBConnect.iud("INSERT INTO parellel_sessions VALUES('" + id + "','" + jComboBox2.getSelectedItem().toString() + "','" + jComboBox3.getSelectedItem().toString() + "','" + jComboBox4.getSelectedItem().toString() + "','" + jComboBox1.getSelectedItem().toString() + "')");
+            }
+
+            JOptionPane pane = new JOptionPane(new Label("Details added successfully"), JOptionPane.INFORMATION_MESSAGE);
+            JDialog dialog = pane.createDialog("Data Saved");
+            dialog.setModal(true);
+            dialog.setVisible(true);
+
+            //JOptionPane.showMessageDialog(this, "Data Saved", "Details added successfully", JOptionPane.INFORMATION_MESSAGE);
+            generator.Parent.removeAll();
+            generator.Parent.add(new parellel_sessions());
+            generator.Parent.repaint();
+            generator.Parent.revalidate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane pane = new JOptionPane(new Label("Details not added successfully"), JOptionPane.INFORMATION_MESSAGE);
+            JDialog dialog = pane.createDialog("Data Not Saved");
+            dialog.setModal(true);
+            dialog.setVisible(true);
+
+            //JOptionPane.showMessageDialog(this, "Data Not Saved", "Details Not successfully", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel add_consecutive_sessions;
+    private javax.swing.JPanel add_parellel_sessions;
     private javax.swing.JButton jButton11;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -473,7 +471,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
 
     public void loadCombo() {
         try {
-            String qry = "SELECT * FROM sessions where groupNo = '" + jComboBox2.getSelectedItem().toString() + "'";
+            String qry = "SELECT * FROM sessions where groupNo LIKE '" + jComboBox2.getSelectedItem().toString() + "%'";
             ResultSet rs = DBConnect.search(qry);
             jComboBox1.removeAllItems();
             jComboBox4.removeAllItems();
@@ -504,7 +502,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
             jComboBox2.removeAllItems();
             jComboBox2.addItem("Select...");
             while (rs.next()) {
-                jComboBox2.addItem(rs.getString("groupNo"));
+                jComboBox2.addItem(rs.getString("groupNo").substring(0, 5));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -513,7 +511,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
 
     public void loadId() {
         try {
-            String qry = "SELECT COUNT(consecutive_sessions.id) as count FROM consecutive_sessions";
+            String qry = "SELECT COUNT(parellel_sessions.id) as count FROM parellel_sessions";
             ResultSet rs = DBConnect.search(qry);
             rs.next();
             if (rs.getInt("count") == 0) {
