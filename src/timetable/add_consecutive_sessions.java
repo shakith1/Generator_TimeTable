@@ -191,7 +191,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
 
         jLabel41.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel41.setText("Session 2");
+        jLabel41.setText("Session 3");
         jPanel22.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, -1, -1));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -332,7 +332,7 @@ public class add_consecutive_sessions extends javax.swing.JPanel {
 
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane pane = new JOptionPane(new Label("Details not added successfully"), JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane pane = new JOptionPane(new Label("Details not added successfully"), JOptionPane.ERROR_MESSAGE);
             JDialog dialog = pane.createDialog("Data Not Saved");
             dialog.setModal(true);
             dialog.setVisible(true);

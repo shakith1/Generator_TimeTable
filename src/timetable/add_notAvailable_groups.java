@@ -271,7 +271,7 @@ public class add_notAvailable_groups extends javax.swing.JPanel {
 
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane pane = new JOptionPane(new Label("Details not added successfully"), JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane pane = new JOptionPane(new Label("Details not added successfully"), JOptionPane.ERROR_MESSAGE);
             JDialog dialog = pane.createDialog("Data Not Saved");
             dialog.setModal(true);
             dialog.setVisible(true);

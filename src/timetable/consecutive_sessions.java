@@ -11,6 +11,7 @@ import java.util.Vector;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import service.DBConnect;
+import static timetable.Generator.Parent;
 
 /**
  *
@@ -19,6 +20,8 @@ import service.DBConnect;
 public class consecutive_sessions extends javax.swing.JPanel {
 
     Generator generator;
+    
+    public String num;
 
     /**
      * Creates new form consecutive_sessions
@@ -186,6 +189,14 @@ public class consecutive_sessions extends javax.swing.JPanel {
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
         // TODO add your handling code here:
+                if (evt.getClickCount() == 2) {
+            DefaultTableModel dtm = (DefaultTableModel) jTable2.getModel();
+            num = dtm.getValueAt(jTable2.getSelectedRow(), 0).toString();
+            generator.Parent.removeAll();
+            generator.Parent.add(new edit_consecutive_sessions(num));
+            generator.Parent.repaint();
+            generator.Parent.revalidate();
+        }
     }//GEN-LAST:event_jTable2MouseClicked
 
     private void jLabel71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel71MouseClicked
