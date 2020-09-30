@@ -47,6 +47,7 @@ public class Generator extends javax.swing.JFrame {
     
     view_lecturers view_lecturers;
     lecturer_add lecturer_add;
+    lec_timetables lec_timetables;
 
     /**
      * Creates new form Generator
@@ -271,13 +272,12 @@ public class Generator extends javax.swing.JFrame {
         wds_first_view = new javax.swing.JButton();
         wds_second = new javax.swing.JPanel();
         wds_sec_title = new javax.swing.JLabel();
-        wds_sec_days_lbl = new javax.swing.JLabel();
-        wds_sec_time_lbl = new javax.swing.JLabel();
-        wds_sec_slot_lbl = new javax.swing.JLabel();
+        wds_sec_pn = new javax.swing.JPanel();
         wds_sec_type_lbl = new javax.swing.JLabel();
-        wds_sec_no_lbl = new javax.swing.JLabel();
         wds_sec_type = new javax.swing.JComboBox<>();
+        wds_sec_no_lbl = new javax.swing.JLabel();
         wds_sec_ndays = new javax.swing.JComboBox<>();
+        wds_sec_days_lbl = new javax.swing.JLabel();
         monday = new javax.swing.JCheckBox();
         tuesday = new javax.swing.JCheckBox();
         wednesday = new javax.swing.JCheckBox();
@@ -285,14 +285,16 @@ public class Generator extends javax.swing.JFrame {
         friday = new javax.swing.JCheckBox();
         saturday = new javax.swing.JCheckBox();
         sunday = new javax.swing.JCheckBox();
+        wds_sec_time_lbl = new javax.swing.JLabel();
         wds_sec_hrs_lbl = new javax.swing.JLabel();
-        wds_sec_mins_lbl = new javax.swing.JLabel();
         wds_sec_hrs = new javax.swing.JTextField();
+        wds_sec_mins_lbl = new javax.swing.JLabel();
+        wds_sec_mins = new javax.swing.JTextField();
+        wds_sec_slot_lbl = new javax.swing.JLabel();
         wds_sec_slot = new javax.swing.JComboBox<>();
         wds_second_add_btn = new javax.swing.JButton();
         wds_second_view_btn = new javax.swing.JButton();
         wds_second_back_btn = new javax.swing.JButton();
-        wds_sec_mins = new javax.swing.JTextField();
         wds_third_viewdetails = new javax.swing.JPanel();
         wds_third_title = new javax.swing.JLabel();
         wds_third_scroll = new javax.swing.JScrollPane();
@@ -302,13 +304,14 @@ public class Generator extends javax.swing.JFrame {
         wds_third_editbtn = new javax.swing.JButton();
         wds_fourth_update = new javax.swing.JPanel();
         wds_fourth_title = new javax.swing.JLabel();
+        wds_fourth_pn = new javax.swing.JPanel();
+        wds_fourth_tid_lbl = new javax.swing.JLabel();
+        test = new javax.swing.JLabel();
         wds_fourth_type_lbl = new javax.swing.JLabel();
-        wds_fourth_no_lbl = new javax.swing.JLabel();
-        wds_fourth_days_lbl = new javax.swing.JLabel();
-        wds_fourth_time_lbl = new javax.swing.JLabel();
-        wds_fourth_slot_lbl = new javax.swing.JLabel();
         wds_fourth_type = new javax.swing.JComboBox<>();
+        wds_fourth_no_lbl = new javax.swing.JLabel();
         wds_fourth_ndays = new javax.swing.JComboBox<>();
+        wds_fourth_days_lbl = new javax.swing.JLabel();
         up_monday = new javax.swing.JCheckBox();
         up_tuesday = new javax.swing.JCheckBox();
         up_wednesday = new javax.swing.JCheckBox();
@@ -316,15 +319,15 @@ public class Generator extends javax.swing.JFrame {
         up_friday = new javax.swing.JCheckBox();
         up_saturday = new javax.swing.JCheckBox();
         up_sunday = new javax.swing.JCheckBox();
+        wds_fourth_time_lbl = new javax.swing.JLabel();
         wds_fourth_hrs_lbl = new javax.swing.JLabel();
         wds_fourth_hrs = new javax.swing.JTextField();
         wds_fourth_mins_lbl = new javax.swing.JLabel();
         wds_fourth_mins = new javax.swing.JTextField();
+        wds_fourth_slot_lbl = new javax.swing.JLabel();
         wds_fourth_slot = new javax.swing.JComboBox<>();
         wds_fourth_updatebtn = new javax.swing.JButton();
         wds_fourth_backbtn = new javax.swing.JButton();
-        wds_fourth_tid_lbl = new javax.swing.JLabel();
-        test = new javax.swing.JLabel();
         timetablesPanel = new javax.swing.JPanel();
         statsticsPanel = new javax.swing.JPanel();
         data_visualization = new javax.swing.JPanel();
@@ -664,7 +667,36 @@ public class Generator extends javax.swing.JFrame {
         jLabel102 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
         sessionsPanel = new javax.swing.JPanel();
+        notAvailableTimes = new javax.swing.JPanel();
+        jPanel37 = new javax.swing.JPanel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel109 = new javax.swing.JLabel();
+        jPanel38 = new javax.swing.JPanel();
+        jLabel110 = new javax.swing.JLabel();
+        jLabel111 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jPanel39 = new javax.swing.JPanel();
+        jLabel112 = new javax.swing.JLabel();
+        jLabel113 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
+        jPanel41 = new javax.swing.JPanel();
+        jLabel116 = new javax.swing.JLabel();
+        jLabel117 = new javax.swing.JLabel();
+        jButton21 = new javax.swing.JButton();
+        jPanel42 = new javax.swing.JPanel();
+        jLabel118 = new javax.swing.JLabel();
+        jLabel119 = new javax.swing.JLabel();
+        jButton27 = new javax.swing.JButton();
+        notAvailable_lecturers = new javax.swing.JPanel();
+        jPanel40 = new javax.swing.JPanel();
+        jLabel114 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
         notAvailable_session = new javax.swing.JPanel();
+        settingsPanel = new javax.swing.JPanel();
+        jPanel36 = new javax.swing.JPanel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel121 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -1520,21 +1552,21 @@ public class Generator extends javax.swing.JFrame {
 
         Parent.add(locationPanel, "locationPanel");
 
-        workingdaysPanel.setBackground(new java.awt.Color(255, 255, 255));
+        workingdaysPanel.setBackground(new java.awt.Color(102, 52, 109));
+        workingdaysPanel.setToolTipText("");
 
         parent_wds.setBackground(new java.awt.Color(255, 255, 255));
         parent_wds.setLayout(new java.awt.CardLayout());
 
-        wds_first.setBackground(new java.awt.Color(255, 255, 255));
+        wds_first.setBackground(new java.awt.Color(102, 52, 109));
 
-        wds_f_add_pnl.setBackground(new java.awt.Color(153, 153, 255));
+        wds_f_add_pnl.setBackground(new java.awt.Color(255, 255, 255));
 
-        wds_f_add_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/t1.jpg"))); // NOI18N
-        wds_f_add_img.setText("jLabel23");
+        wds_f_add_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/calendar (3).png"))); // NOI18N
 
         wds_first_add.setBackground(new java.awt.Color(255, 255, 255));
         wds_first_add.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        wds_first_add.setText("ADD WORKING DAYS AND HOURS");
+        wds_first_add.setText("ADD WORKING DAYS");
         wds_first_add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wds_first_addActionPerformed(evt);
@@ -1545,28 +1577,33 @@ public class Generator extends javax.swing.JFrame {
         wds_f_add_pnl.setLayout(wds_f_add_pnlLayout);
         wds_f_add_pnlLayout.setHorizontalGroup(
             wds_f_add_pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(wds_f_add_img, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_f_add_pnlLayout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
-                .addComponent(wds_first_add, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+            .addGroup(wds_f_add_pnlLayout.createSequentialGroup()
+                .addGroup(wds_f_add_pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(wds_f_add_pnlLayout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(wds_f_add_img))
+                    .addGroup(wds_f_add_pnlLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(wds_first_add)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         wds_f_add_pnlLayout.setVerticalGroup(
             wds_f_add_pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wds_f_add_pnlLayout.createSequentialGroup()
-                .addComponent(wds_f_add_img, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(wds_first_add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18))
+                .addGap(25, 25, 25)
+                .addComponent(wds_f_add_img, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(wds_first_add, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
-        wds_f_view_pnl.setBackground(new java.awt.Color(153, 153, 255));
+        wds_f_view_pnl.setBackground(new java.awt.Color(255, 255, 255));
 
-        wds_f_view_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/t1.jpg"))); // NOI18N
+        wds_f_view_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/calendar (3).png"))); // NOI18N
 
         wds_first_view.setBackground(new java.awt.Color(255, 255, 255));
         wds_first_view.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        wds_first_view.setText("WORKING DAYS AND HOURS DETAILS");
+        wds_first_view.setText("VIEW WORKING DAYS");
         wds_first_view.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wds_first_viewActionPerformed(evt);
@@ -1577,19 +1614,23 @@ public class Generator extends javax.swing.JFrame {
         wds_f_view_pnl.setLayout(wds_f_view_pnlLayout);
         wds_f_view_pnlLayout.setHorizontalGroup(
             wds_f_view_pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(wds_f_view_img)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_f_view_pnlLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(wds_f_view_pnlLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addComponent(wds_first_view)
-                .addGap(42, 42, 42))
+                .addContainerGap(37, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_f_view_pnlLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(wds_f_view_img, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75))
         );
         wds_f_view_pnlLayout.setVerticalGroup(
             wds_f_view_pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wds_f_view_pnlLayout.createSequentialGroup()
-                .addComponent(wds_f_view_img, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(wds_first_view, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                .addGap(18, 18, 18))
+                .addGap(23, 23, 23)
+                .addComponent(wds_f_view_img, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                .addComponent(wds_first_view, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
         );
 
         javax.swing.GroupLayout wds_firstLayout = new javax.swing.GroupLayout(wds_first);
@@ -1597,69 +1638,76 @@ public class Generator extends javax.swing.JFrame {
         wds_firstLayout.setHorizontalGroup(
             wds_firstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wds_firstLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(349, 349, 349)
                 .addComponent(wds_f_add_pnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
+                .addGap(244, 244, 244)
                 .addComponent(wds_f_view_pnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(358, Short.MAX_VALUE))
         );
         wds_firstLayout.setVerticalGroup(
             wds_firstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wds_firstLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addGap(205, 205, 205)
                 .addGroup(wds_firstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(wds_f_view_pnl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(wds_f_add_pnl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap(456, Short.MAX_VALUE))
         );
 
         parent_wds.add(wds_first, "card2");
 
-        wds_second.setBackground(new java.awt.Color(255, 255, 255));
+        wds_second.setBackground(new java.awt.Color(102, 52, 109));
 
-        wds_sec_title.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        wds_sec_title.setBackground(new java.awt.Color(255, 255, 255));
+        wds_sec_title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        wds_sec_title.setForeground(new java.awt.Color(255, 255, 255));
         wds_sec_title.setText("ADD WORKING DAYS AND HOURS");
 
-        wds_sec_days_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_sec_days_lbl.setText("Working Days");
+        wds_sec_pn.setBackground(new java.awt.Color(137, 14, 137));
+        wds_sec_pn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
 
-        wds_sec_time_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_sec_time_lbl.setText("Working Time (per day)");
-
-        wds_sec_slot_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_sec_slot_lbl.setText("Time Slot");
-
-        wds_sec_type_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_sec_type_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_sec_type_lbl.setForeground(new java.awt.Color(255, 255, 255));
         wds_sec_type_lbl.setText("Timetable Type");
 
-        wds_sec_no_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_sec_no_lbl.setText("Number of Working Days (per week)");
-
-        wds_sec_type.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_sec_type.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         wds_sec_type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Weekend", "Weekdays" }));
 
-        wds_sec_ndays.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_sec_no_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_sec_no_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_sec_no_lbl.setText("Number of Working Days (per week)");
+
+        wds_sec_ndays.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         wds_sec_ndays.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7" }));
 
-        monday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_sec_days_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_sec_days_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_sec_days_lbl.setText("Working Days");
+
+        monday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         monday.setText("Monday");
 
-        tuesday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tuesday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         tuesday.setText("Tuesday");
+        tuesday.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tuesdayActionPerformed(evt);
+            }
+        });
 
-        wednesday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wednesday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         wednesday.setText("Wednesday");
 
-        thursday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        thursday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         thursday.setText("Thursday");
 
-        friday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        friday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         friday.setText("Friday");
 
-        saturday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        saturday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         saturday.setText("Saturday");
 
-        sunday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        sunday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         sunday.setText("Sunday");
         sunday.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1667,19 +1715,31 @@ public class Generator extends javax.swing.JFrame {
             }
         });
 
-        wds_sec_hrs_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_sec_time_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_sec_time_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_sec_time_lbl.setText("Working Time (per day)");
+
+        wds_sec_hrs_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_sec_hrs_lbl.setForeground(new java.awt.Color(255, 255, 255));
         wds_sec_hrs_lbl.setText("hours");
 
-        wds_sec_mins_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_sec_hrs.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+
+        wds_sec_mins_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_sec_mins_lbl.setForeground(new java.awt.Color(255, 255, 255));
         wds_sec_mins_lbl.setText("minutes");
 
-        wds_sec_hrs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_sec_mins.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
 
-        wds_sec_slot.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_sec_slot_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_sec_slot_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_sec_slot_lbl.setText("Time Slot");
+
+        wds_sec_slot.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         wds_sec_slot.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 hour", "30 minutes" }));
 
         wds_second_add_btn.setBackground(new java.awt.Color(102, 102, 102));
-        wds_second_add_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        wds_second_add_btn.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         wds_second_add_btn.setText("ADD");
         wds_second_add_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1688,7 +1748,7 @@ public class Generator extends javax.swing.JFrame {
         });
 
         wds_second_view_btn.setBackground(new java.awt.Color(102, 102, 102));
-        wds_second_view_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        wds_second_view_btn.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         wds_second_view_btn.setText("VIEW DETAILS");
         wds_second_view_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1696,7 +1756,7 @@ public class Generator extends javax.swing.JFrame {
             }
         });
 
-        wds_second_back_btn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        wds_second_back_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         wds_second_back_btn.setText("back");
         wds_second_back_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1704,122 +1764,144 @@ public class Generator extends javax.swing.JFrame {
             }
         });
 
-        wds_sec_mins.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        javax.swing.GroupLayout wds_sec_pnLayout = new javax.swing.GroupLayout(wds_sec_pn);
+        wds_sec_pn.setLayout(wds_sec_pnLayout);
+        wds_sec_pnLayout.setHorizontalGroup(
+            wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wds_sec_pnLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(wds_sec_pnLayout.createSequentialGroup()
+                        .addComponent(wds_sec_time_lbl)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(wds_sec_pnLayout.createSequentialGroup()
+                        .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(wds_sec_pnLayout.createSequentialGroup()
+                                .addComponent(wds_sec_type_lbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(wds_sec_type, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_sec_pnLayout.createSequentialGroup()
+                                .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(wds_sec_no_lbl)
+                                    .addComponent(wds_sec_days_lbl)
+                                    .addComponent(wds_sec_slot_lbl))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                                .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(wds_sec_slot, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(wds_sec_pnLayout.createSequentialGroup()
+                                            .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(tuesday, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                                                .addComponent(monday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGap(40, 40, 40)
+                                            .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(sunday, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(saturday, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(wds_sec_ndays, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(friday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(thursday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(wednesday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(wds_sec_pnLayout.createSequentialGroup()
+                                            .addComponent(wds_sec_hrs_lbl)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(wds_sec_hrs, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(36, 36, 36)
+                                            .addComponent(wds_sec_mins_lbl)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(wds_sec_mins))))))
+                        .addGap(111, 111, 111))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_sec_pnLayout.createSequentialGroup()
+                .addGap(128, 128, 128)
+                .addComponent(wds_second_add_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(122, 122, 122)
+                .addComponent(wds_second_view_btn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_sec_pnLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(wds_second_back_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69))
+        );
+        wds_sec_pnLayout.setVerticalGroup(
+            wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wds_sec_pnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wds_sec_type_lbl)
+                    .addComponent(wds_sec_type, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wds_sec_no_lbl)
+                    .addComponent(wds_sec_ndays, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wds_sec_days_lbl)
+                    .addComponent(monday)
+                    .addComponent(saturday))
+                .addGap(18, 18, 18)
+                .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tuesday)
+                    .addComponent(sunday))
+                .addGap(18, 18, 18)
+                .addComponent(wednesday)
+                .addGap(18, 18, 18)
+                .addComponent(thursday)
+                .addGap(18, 18, 18)
+                .addComponent(friday)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_sec_pnLayout.createSequentialGroup()
+                        .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(wds_sec_time_lbl)
+                            .addComponent(wds_sec_hrs_lbl)
+                            .addComponent(wds_sec_hrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(wds_sec_mins_lbl)
+                            .addComponent(wds_sec_mins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)
+                        .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(wds_sec_slot_lbl)
+                            .addComponent(wds_sec_slot, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(116, 116, 116)
+                        .addComponent(wds_second_back_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_sec_pnLayout.createSequentialGroup()
+                        .addGroup(wds_sec_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(wds_second_view_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(wds_second_add_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(81, 81, 81))))
+        );
 
         javax.swing.GroupLayout wds_secondLayout = new javax.swing.GroupLayout(wds_second);
         wds_second.setLayout(wds_secondLayout);
         wds_secondLayout.setHorizontalGroup(
             wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wds_secondLayout.createSequentialGroup()
-                .addGap(333, 333, 333)
-                .addComponent(wds_sec_title)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(wds_secondLayout.createSequentialGroup()
-                .addGap(214, 214, 214)
                 .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(wds_sec_slot_lbl)
-                    .addComponent(wds_sec_type_lbl)
-                    .addComponent(wds_sec_no_lbl)
-                    .addComponent(wds_sec_days_lbl)
-                    .addComponent(wds_sec_time_lbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
-                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_secondLayout.createSequentialGroup()
-                        .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(wds_sec_type, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(wds_secondLayout.createSequentialGroup()
-                                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(sunday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(saturday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(friday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(thursday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(wednesday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                                    .addComponent(tuesday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(monday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(112, 112, 112))
-                            .addComponent(wds_sec_ndays, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(211, 211, 211))
                     .addGroup(wds_secondLayout.createSequentialGroup()
-                        .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(wds_secondLayout.createSequentialGroup()
-                                .addComponent(wds_sec_hrs_lbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(wds_sec_hrs, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)
-                                .addComponent(wds_sec_mins_lbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(wds_sec_mins, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(wds_sec_slot, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
-            .addGroup(wds_secondLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_secondLayout.createSequentialGroup()
-                        .addComponent(wds_second_back_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(114, 114, 114))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_secondLayout.createSequentialGroup()
-                        .addComponent(wds_second_add_btn)
-                        .addGap(150, 150, 150)
-                        .addComponent(wds_second_view_btn)
-                        .addGap(382, 382, 382))))
+                        .addGap(492, 492, 492)
+                        .addComponent(wds_sec_title))
+                    .addGroup(wds_secondLayout.createSequentialGroup()
+                        .addGap(255, 255, 255)
+                        .addComponent(wds_sec_pn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(445, Short.MAX_VALUE))
         );
         wds_secondLayout.setVerticalGroup(
             wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wds_secondLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(wds_sec_title)
-                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(wds_secondLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(wds_sec_type_lbl))
-                    .addGroup(wds_secondLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(wds_sec_type, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(wds_sec_no_lbl)
-                    .addComponent(wds_sec_ndays, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wds_sec_days_lbl)
-                    .addComponent(monday))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tuesday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(wednesday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(thursday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(friday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(saturday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(sunday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wds_sec_time_lbl)
-                    .addComponent(wds_sec_hrs_lbl)
-                    .addComponent(wds_sec_hrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(wds_sec_mins_lbl)
-                    .addComponent(wds_sec_mins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wds_sec_slot_lbl)
-                    .addComponent(wds_sec_slot, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(wds_secondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wds_second_view_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(wds_second_add_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(wds_second_back_btn)
-                .addGap(54, 54, 54))
+                .addGap(32, 32, 32)
+                .addComponent(wds_sec_pn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(250, Short.MAX_VALUE))
         );
 
         parent_wds.add(wds_second, "card3");
 
-        wds_third_viewdetails.setBackground(new java.awt.Color(255, 255, 255));
+        wds_third_viewdetails.setBackground(new java.awt.Color(102, 52, 109));
 
-        wds_third_title.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        wds_third_title.setBackground(new java.awt.Color(255, 255, 255));
+        wds_third_title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        wds_third_title.setForeground(new java.awt.Color(255, 255, 255));
         wds_third_title.setText("WORKING DAYS AND HOURS DETAILS");
 
         wds_third_table.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -1841,7 +1923,7 @@ public class Generator extends javax.swing.JFrame {
         });
         wds_third_scroll.setViewportView(wds_third_table);
 
-        wds_third_backbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        wds_third_backbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         wds_third_backbtn.setText("back");
         wds_third_backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1850,7 +1932,7 @@ public class Generator extends javax.swing.JFrame {
         });
 
         wds_third_deletebtn.setBackground(new java.awt.Color(102, 102, 102));
-        wds_third_deletebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        wds_third_deletebtn.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         wds_third_deletebtn.setText("DELETE");
         wds_third_deletebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1859,7 +1941,7 @@ public class Generator extends javax.swing.JFrame {
         });
 
         wds_third_editbtn.setBackground(new java.awt.Color(102, 102, 102));
-        wds_third_editbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        wds_third_editbtn.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         wds_third_editbtn.setText("EDIT");
         wds_third_editbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1871,104 +1953,159 @@ public class Generator extends javax.swing.JFrame {
         wds_third_viewdetails.setLayout(wds_third_viewdetailsLayout);
         wds_third_viewdetailsLayout.setHorizontalGroup(
             wds_third_viewdetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_third_viewdetailsLayout.createSequentialGroup()
-                .addGap(261, 261, 261)
-                .addComponent(wds_third_editbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(190, 190, 190)
-                .addComponent(wds_third_deletebtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(wds_third_viewdetailsLayout.createSequentialGroup()
                 .addGroup(wds_third_viewdetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(wds_third_viewdetailsLayout.createSequentialGroup()
-                        .addGap(343, 343, 343)
+                        .addGap(596, 596, 596)
+                        .addComponent(wds_third_editbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(247, 247, 247)
+                        .addComponent(wds_third_deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(wds_third_viewdetailsLayout.createSequentialGroup()
+                        .addGap(478, 478, 478)
                         .addComponent(wds_third_title))
-                    .addComponent(wds_third_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 1013, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 36, Short.MAX_VALUE))
+                    .addGroup(wds_third_viewdetailsLayout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(wds_third_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 1469, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(37, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_third_viewdetailsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(wds_third_backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(152, 152, 152))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(wds_third_backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(141, 141, 141))
         );
         wds_third_viewdetailsLayout.setVerticalGroup(
             wds_third_viewdetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wds_third_viewdetailsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(wds_third_title)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(wds_third_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101)
+                .addGap(117, 117, 117)
                 .addGroup(wds_third_viewdetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wds_third_deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(wds_third_editbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(wds_third_backbtn)
-                .addGap(69, 69, 69))
+                    .addComponent(wds_third_editbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(wds_third_deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59)
+                .addComponent(wds_third_backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(402, Short.MAX_VALUE))
         );
 
         parent_wds.add(wds_third_viewdetails, "card4");
 
-        wds_fourth_update.setBackground(new java.awt.Color(255, 255, 255));
+        wds_fourth_update.setBackground(new java.awt.Color(102, 52, 109));
 
-        wds_fourth_title.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        wds_fourth_title.setBackground(new java.awt.Color(255, 255, 255));
+        wds_fourth_title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        wds_fourth_title.setForeground(new java.awt.Color(255, 255, 255));
         wds_fourth_title.setText("UPTADE WORKING DAYS AND HOURS");
 
-        wds_fourth_type_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_fourth_pn.setBackground(new java.awt.Color(137, 14, 137));
+        wds_fourth_pn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
+
+        wds_fourth_tid_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_tid_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_fourth_tid_lbl.setText("Timetable ID");
+
+        test.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        test.setForeground(new java.awt.Color(255, 255, 255));
+
+        wds_fourth_type_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_type_lbl.setForeground(new java.awt.Color(255, 255, 255));
         wds_fourth_type_lbl.setText("Timetable Type");
 
-        wds_fourth_no_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_fourth_no_lbl.setText("Number of Working Days (per week)");
-
-        wds_fourth_days_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_fourth_days_lbl.setText("Working Days");
-
-        wds_fourth_time_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_fourth_time_lbl.setText("Working Time (per day)");
-
-        wds_fourth_slot_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_fourth_slot_lbl.setText("TIme Slot");
-
-        wds_fourth_type.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_fourth_type.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         wds_fourth_type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Weekend", "Weekdays" }));
 
-        wds_fourth_ndays.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_fourth_ndays.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7" }));
+        wds_fourth_no_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_no_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_fourth_no_lbl.setText("Number of Working Days (per week)");
 
-        up_monday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_fourth_ndays.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_ndays.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7" }));
+        wds_fourth_ndays.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wds_fourth_ndaysActionPerformed(evt);
+            }
+        });
+
+        wds_fourth_days_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_days_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_fourth_days_lbl.setText("Working Days");
+
+        up_monday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         up_monday.setText("Monday");
 
-        up_tuesday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        up_tuesday.setText("Thuesday");
+        up_tuesday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        up_tuesday.setText("Tuesday");
+        up_tuesday.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                up_tuesdayActionPerformed(evt);
+            }
+        });
 
-        up_wednesday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        up_wednesday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         up_wednesday.setText("Wednesday");
 
-        up_thursday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        up_thursday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         up_thursday.setText("Thursday");
 
-        up_friday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        up_friday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         up_friday.setText("Friday");
+        up_friday.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                up_fridayActionPerformed(evt);
+            }
+        });
 
-        up_saturday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        up_saturday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         up_saturday.setText("Saturday");
+        up_saturday.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                up_saturdayActionPerformed(evt);
+            }
+        });
 
-        up_sunday.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        up_sunday.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         up_sunday.setText("Sunday");
 
-        wds_fourth_hrs_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_fourth_time_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_time_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_fourth_time_lbl.setText("Working Time (per day)");
+
+        wds_fourth_hrs_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_hrs_lbl.setForeground(new java.awt.Color(255, 255, 255));
         wds_fourth_hrs_lbl.setText("hours");
 
-        wds_fourth_hrs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_fourth_hrs.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_hrs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wds_fourth_hrsActionPerformed(evt);
+            }
+        });
 
-        wds_fourth_mins_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_fourth_mins_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_mins_lbl.setForeground(new java.awt.Color(255, 255, 255));
         wds_fourth_mins_lbl.setText("minutes");
 
-        wds_fourth_mins.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_fourth_mins.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_mins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wds_fourth_minsActionPerformed(evt);
+            }
+        });
 
-        wds_fourth_slot.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        wds_fourth_slot_lbl.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        wds_fourth_slot_lbl.setForeground(new java.awt.Color(255, 255, 255));
+        wds_fourth_slot_lbl.setText("TIme Slot");
+
+        wds_fourth_slot.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         wds_fourth_slot.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 hour", "30 minutes" }));
+        wds_fourth_slot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wds_fourth_slotActionPerformed(evt);
+            }
+        });
 
         wds_fourth_updatebtn.setBackground(new java.awt.Color(102, 102, 102));
-        wds_fourth_updatebtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        wds_fourth_updatebtn.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         wds_fourth_updatebtn.setText("UPDATE");
         wds_fourth_updatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1976,7 +2113,7 @@ public class Generator extends javax.swing.JFrame {
             }
         });
 
-        wds_fourth_backbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        wds_fourth_backbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         wds_fourth_backbtn.setText("back");
         wds_fourth_backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1984,56 +2121,123 @@ public class Generator extends javax.swing.JFrame {
             }
         });
 
-        wds_fourth_tid_lbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        wds_fourth_tid_lbl.setText("Timetable ID");
-
-        test.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        javax.swing.GroupLayout wds_fourth_pnLayout = new javax.swing.GroupLayout(wds_fourth_pn);
+        wds_fourth_pn.setLayout(wds_fourth_pnLayout);
+        wds_fourth_pnLayout.setHorizontalGroup(
+            wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wds_fourth_pnLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_fourth_pnLayout.createSequentialGroup()
+                        .addComponent(wds_fourth_no_lbl)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(wds_fourth_pnLayout.createSequentialGroup()
+                        .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(wds_fourth_type_lbl)
+                            .addGroup(wds_fourth_pnLayout.createSequentialGroup()
+                                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(wds_fourth_tid_lbl)
+                                    .addComponent(wds_fourth_days_lbl)
+                                    .addComponent(wds_fourth_time_lbl)
+                                    .addComponent(wds_fourth_slot_lbl))
+                                .addGap(191, 191, 191)
+                                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(wds_fourth_slot, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(wds_fourth_pnLayout.createSequentialGroup()
+                                        .addComponent(wds_fourth_hrs_lbl)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(wds_fourth_hrs, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(wds_fourth_mins_lbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(wds_fourth_mins, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(wds_fourth_pnLayout.createSequentialGroup()
+                                            .addComponent(up_monday, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(29, 29, 29)
+                                            .addComponent(up_saturday, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(test, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(wds_fourth_pnLayout.createSequentialGroup()
+                                            .addComponent(up_tuesday, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(up_sunday, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(up_wednesday, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(up_thursday, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(up_friday, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(wds_fourth_type, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(wds_fourth_ndays, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addGap(0, 40, Short.MAX_VALUE))))
+            .addGroup(wds_fourth_pnLayout.createSequentialGroup()
+                .addGap(313, 313, 313)
+                .addComponent(wds_fourth_updatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_fourth_pnLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(wds_fourth_backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
+        );
+        wds_fourth_pnLayout.setVerticalGroup(
+            wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wds_fourth_pnLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(test, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(wds_fourth_tid_lbl))
+                .addGap(33, 33, 33)
+                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wds_fourth_type_lbl)
+                    .addComponent(wds_fourth_type, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(wds_fourth_no_lbl)
+                    .addComponent(wds_fourth_ndays, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wds_fourth_days_lbl)
+                    .addComponent(up_monday)
+                    .addComponent(up_saturday))
+                .addGap(22, 22, 22)
+                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(up_tuesday)
+                    .addComponent(up_sunday))
+                .addGap(18, 18, 18)
+                .addComponent(up_wednesday)
+                .addGap(18, 18, 18)
+                .addComponent(up_thursday)
+                .addGap(18, 18, 18)
+                .addComponent(up_friday)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(wds_fourth_time_lbl)
+                    .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(wds_fourth_hrs_lbl)
+                        .addComponent(wds_fourth_mins_lbl)
+                        .addComponent(wds_fourth_hrs, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(wds_fourth_mins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(25, 25, 25)
+                .addGroup(wds_fourth_pnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wds_fourth_slot_lbl)
+                    .addComponent(wds_fourth_slot, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57)
+                .addComponent(wds_fourth_updatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(wds_fourth_backbtn)
+                .addGap(95, 95, 95))
+        );
 
         javax.swing.GroupLayout wds_fourth_updateLayout = new javax.swing.GroupLayout(wds_fourth_update);
         wds_fourth_update.setLayout(wds_fourth_updateLayout);
         wds_fourth_updateLayout.setHorizontalGroup(
             wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wds_fourth_updateLayout.createSequentialGroup()
-                .addGap(327, 327, 327)
-                .addComponent(wds_fourth_title)
-                .addContainerGap(340, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_fourth_updateLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(wds_fourth_updatebtn)
-                .addGap(272, 272, 272)
-                .addComponent(wds_fourth_backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(196, 196, 196))
-            .addGroup(wds_fourth_updateLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
                 .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(wds_fourth_no_lbl)
-                    .addComponent(wds_fourth_days_lbl)
-                    .addComponent(wds_fourth_type_lbl)
-                    .addComponent(wds_fourth_time_lbl)
-                    .addComponent(wds_fourth_slot_lbl)
-                    .addComponent(wds_fourth_tid_lbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(up_monday, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(up_sunday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(up_saturday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(up_friday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(up_thursday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(up_wednesday, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                    .addComponent(up_tuesday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(wds_fourth_updateLayout.createSequentialGroup()
-                        .addComponent(wds_fourth_hrs_lbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(wds_fourth_hrs, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(wds_fourth_mins_lbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(wds_fourth_mins, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(test, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(wds_fourth_type, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(wds_fourth_ndays, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(wds_fourth_slot, 0, 211, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(478, 478, 478)
+                        .addComponent(wds_fourth_title))
+                    .addGroup(wds_fourth_updateLayout.createSequentialGroup()
+                        .addGap(311, 311, 311)
+                        .addComponent(wds_fourth_pn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(438, Short.MAX_VALUE))
         );
         wds_fourth_updateLayout.setVerticalGroup(
             wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2041,57 +2245,8 @@ public class Generator extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(wds_fourth_title)
                 .addGap(34, 34, 34)
-                .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(test, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(wds_fourth_tid_lbl))
-                .addGap(18, 18, 18)
-                .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(wds_fourth_type_lbl)
-                    .addComponent(wds_fourth_type, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wds_fourth_no_lbl)
-                    .addComponent(wds_fourth_ndays, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(up_monday)
-                    .addComponent(wds_fourth_days_lbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(up_tuesday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(up_wednesday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(up_thursday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(up_friday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(up_saturday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(up_sunday)
-                .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(wds_fourth_updateLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(wds_fourth_hrs_lbl)
-                            .addComponent(wds_fourth_hrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(wds_fourth_mins_lbl)
-                            .addComponent(wds_fourth_mins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(wds_fourth_slot, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_fourth_updateLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(wds_fourth_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_fourth_updateLayout.createSequentialGroup()
-                                .addComponent(wds_fourth_time_lbl)
-                                .addGap(18, 18, 18)
-                                .addComponent(wds_fourth_slot_lbl)
-                                .addGap(73, 73, 73)
-                                .addComponent(wds_fourth_backbtn)
-                                .addGap(59, 59, 59))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wds_fourth_updateLayout.createSequentialGroup()
-                                .addComponent(wds_fourth_updatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(70, 70, 70))))))
+                .addComponent(wds_fourth_pn, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(240, Short.MAX_VALUE))
         );
 
         parent_wds.add(wds_fourth_update, "card5");
@@ -2101,16 +2256,16 @@ public class Generator extends javax.swing.JFrame {
         workingdaysPanelLayout.setHorizontalGroup(
             workingdaysPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(workingdaysPanelLayout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(parent_wds, javax.swing.GroupLayout.PREFERRED_SIZE, 1049, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(3275, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(parent_wds, javax.swing.GroupLayout.PREFERRED_SIZE, 1563, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(2877, Short.MAX_VALUE))
         );
         workingdaysPanelLayout.setVerticalGroup(
             workingdaysPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workingdaysPanelLayout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
-                .addComponent(parent_wds, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(184, 184, 184))
+            .addGroup(workingdaysPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(parent_wds, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         Parent.add(workingdaysPanel, "workingdaysPanel");
@@ -4467,7 +4622,7 @@ public class Generator extends javax.swing.JFrame {
                 .addComponent(jLabel79)
                 .addGap(568, 568, 568)
                 .addComponent(jLabel38)
-                .addContainerGap(726, Short.MAX_VALUE))
+                .addContainerGap(727, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4492,7 +4647,7 @@ public class Generator extends javax.swing.JFrame {
             programmeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(programmeLayout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2858, Short.MAX_VALUE))
+                .addGap(0, 2857, Short.MAX_VALUE))
             .addGroup(programmeLayout.createSequentialGroup()
                 .addGroup(programmeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(programmeLayout.createSequentialGroup()
@@ -5775,6 +5930,316 @@ public class Generator extends javax.swing.JFrame {
 
         Parent.add(sessionsPanel, "sessionsPanel");
 
+        notAvailableTimes.setBackground(new java.awt.Color(102, 51, 109));
+
+        jPanel37.setBackground(new java.awt.Color(135, 19, 135));
+
+        jLabel108.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-back-50.png"))); // NOI18N
+        jLabel108.setToolTipText("");
+        jLabel108.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel108MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel108MouseEntered(evt);
+            }
+        });
+
+        jLabel109.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLabel109.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel109.setText("Not Available Times");
+
+        javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
+        jPanel37.setLayout(jPanel37Layout);
+        jPanel37Layout.setHorizontalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jLabel108)
+                .addGap(527, 527, 527)
+                .addComponent(jLabel109)
+                .addContainerGap(814, Short.MAX_VALUE))
+        );
+        jPanel37Layout.setVerticalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel37Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel108))
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
+        jPanel38.setBackground(new java.awt.Color(132, 57, 132));
+        jPanel38.setPreferredSize(new java.awt.Dimension(283, 322));
+
+        jLabel110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/presentation.png"))); // NOI18N
+
+        jLabel111.setFont(new java.awt.Font("Segoe UI Semibold", 2, 24)); // NOI18N
+        jLabel111.setForeground(new java.awt.Color(220, 220, 220));
+        jLabel111.setText("Lecturers");
+
+        jButton9.setBackground(new java.awt.Color(153, 0, 153));
+        jButton9.setForeground(new java.awt.Color(102, 0, 0));
+        jButton9.setText(">>>");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
+        jPanel38.setLayout(jPanel38Layout);
+        jPanel38Layout.setHorizontalGroup(
+            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel38Layout.createSequentialGroup()
+                .addContainerGap(80, Short.MAX_VALUE)
+                .addComponent(jLabel110)
+                .addGap(75, 75, 75))
+            .addGroup(jPanel38Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel111)
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel38Layout.setVerticalGroup(
+            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel38Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel110)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel111)
+                .addGap(18, 18, 18)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
+        );
+
+        jPanel39.setBackground(new java.awt.Color(132, 57, 132));
+
+        jLabel112.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/group (2).png"))); // NOI18N
+
+        jLabel113.setFont(new java.awt.Font("Segoe UI Semibold", 2, 24)); // NOI18N
+        jLabel113.setForeground(new java.awt.Color(220, 220, 220));
+        jLabel113.setText("Groups");
+
+        jButton14.setBackground(new java.awt.Color(153, 0, 153));
+        jButton14.setForeground(new java.awt.Color(102, 0, 0));
+        jButton14.setText(">>>");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
+        jPanel39.setLayout(jPanel39Layout);
+        jPanel39Layout.setHorizontalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addContainerGap(80, Short.MAX_VALUE)
+                .addComponent(jLabel112)
+                .addGap(75, 75, 75))
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel113))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel39Layout.setVerticalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
+                .addComponent(jLabel112)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel113)
+                .addGap(28, 28, 28)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+        );
+
+        jPanel41.setBackground(new java.awt.Color(132, 57, 132));
+
+        jLabel116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/group (1).png"))); // NOI18N
+
+        jLabel117.setFont(new java.awt.Font("Segoe UI Semibold", 2, 24)); // NOI18N
+        jLabel117.setForeground(new java.awt.Color(220, 220, 220));
+        jLabel117.setText("Subgroups");
+
+        jButton21.setBackground(new java.awt.Color(153, 0, 153));
+        jButton21.setForeground(new java.awt.Color(102, 0, 0));
+        jButton21.setText(">>>");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
+        jPanel41.setLayout(jPanel41Layout);
+        jPanel41Layout.setHorizontalGroup(
+            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel41Layout.createSequentialGroup()
+                .addContainerGap(80, Short.MAX_VALUE)
+                .addComponent(jLabel116)
+                .addGap(75, 75, 75))
+            .addGroup(jPanel41Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel117))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel41Layout.setVerticalGroup(
+            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel41Layout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
+                .addComponent(jLabel116)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel117)
+                .addGap(28, 28, 28)
+                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+        );
+
+        jPanel42.setBackground(new java.awt.Color(132, 57, 132));
+        jPanel42.setPreferredSize(new java.awt.Dimension(283, 322));
+
+        jLabel118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/calendar.png"))); // NOI18N
+
+        jLabel119.setFont(new java.awt.Font("Segoe UI Semibold", 2, 24)); // NOI18N
+        jLabel119.setForeground(new java.awt.Color(220, 220, 220));
+        jLabel119.setText("Sessions");
+
+        jButton27.setBackground(new java.awt.Color(153, 0, 153));
+        jButton27.setForeground(new java.awt.Color(102, 0, 0));
+        jButton27.setText(">>>");
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
+        jPanel42.setLayout(jPanel42Layout);
+        jPanel42Layout.setHorizontalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel42Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(jLabel118)
+                .addGap(0, 67, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel119))
+                .addGap(87, 87, 87))
+        );
+        jPanel42Layout.setVerticalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel42Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel118)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel119)
+                .addGap(18, 18, 18)
+                .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
+        );
+
+        javax.swing.GroupLayout notAvailableTimesLayout = new javax.swing.GroupLayout(notAvailableTimes);
+        notAvailableTimes.setLayout(notAvailableTimesLayout);
+        notAvailableTimesLayout.setHorizontalGroup(
+            notAvailableTimesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(notAvailableTimesLayout.createSequentialGroup()
+                .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2692, Short.MAX_VALUE))
+            .addGroup(notAvailableTimesLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90)
+                .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(120, 120, 120)
+                .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105)
+                .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        notAvailableTimesLayout.setVerticalGroup(
+            notAvailableTimesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(notAvailableTimesLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(171, 171, 171)
+                .addGroup(notAvailableTimesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
+        );
+
+        Parent.add(notAvailableTimes, "notAvailableTimes");
+
+        notAvailable_lecturers.setBackground(new java.awt.Color(102, 51, 109));
+
+        jPanel40.setBackground(new java.awt.Color(135, 19, 135));
+
+        jLabel114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-back-50.png"))); // NOI18N
+        jLabel114.setToolTipText("");
+        jLabel114.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel114MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel114MouseEntered(evt);
+            }
+        });
+
+        jLabel115.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLabel115.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel115.setText("Not Available Times - Lecturers");
+
+        javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
+        jPanel40.setLayout(jPanel40Layout);
+        jPanel40Layout.setHorizontalGroup(
+            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jLabel114)
+                .addGap(491, 491, 491)
+                .addComponent(jLabel115)
+                .addContainerGap(850, Short.MAX_VALUE))
+        );
+        jPanel40Layout.setVerticalGroup(
+            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel40Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel114))
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout notAvailable_lecturersLayout = new javax.swing.GroupLayout(notAvailable_lecturers);
+        notAvailable_lecturers.setLayout(notAvailable_lecturersLayout);
+        notAvailable_lecturersLayout.setHorizontalGroup(
+            notAvailable_lecturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(notAvailable_lecturersLayout.createSequentialGroup()
+                .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2536, Short.MAX_VALUE))
+        );
+        notAvailable_lecturersLayout.setVerticalGroup(
+            notAvailable_lecturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(notAvailable_lecturersLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(741, Short.MAX_VALUE))
+        );
+
+        Parent.add(notAvailable_lecturers, "notAvailable_lecturers");
+
         notAvailable_session.setBackground(new java.awt.Color(102, 51, 109));
 
         javax.swing.GroupLayout notAvailable_sessionLayout = new javax.swing.GroupLayout(notAvailable_session);
@@ -5789,6 +6254,71 @@ public class Generator extends javax.swing.JFrame {
         );
 
         Parent.add(notAvailable_session, "notAvailable_session");
+
+        settingsPanel.setBackground(new java.awt.Color(102, 51, 109));
+
+        jPanel36.setBackground(new java.awt.Color(132, 57, 132));
+
+        jLabel121.setFont(new java.awt.Font("Segoe UI Semibold", 2, 24)); // NOI18N
+        jLabel121.setForeground(new java.awt.Color(220, 220, 220));
+        jLabel121.setText("Not Available Times");
+
+        jButton2.setBackground(new java.awt.Color(153, 0, 153));
+        jButton2.setForeground(new java.awt.Color(102, 0, 0));
+        jButton2.setText(">>>");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
+        jPanel36.setLayout(jPanel36Layout);
+        jPanel36Layout.setHorizontalGroup(
+            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel36Layout.createSequentialGroup()
+                .addContainerGap(111, Short.MAX_VALUE)
+                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel36Layout.createSequentialGroup()
+                        .addComponent(jLabel67)
+                        .addGap(140, 140, 140))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel36Layout.createSequentialGroup()
+                        .addComponent(jLabel121)
+                        .addGap(90, 90, 90))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel36Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(151, 151, 151))))
+        );
+        jPanel36Layout.setVerticalGroup(
+            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel36Layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(jLabel67)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel121)
+                .addGap(28, 28, 28)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
+        );
+
+        javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
+        settingsPanel.setLayout(settingsPanelLayout);
+        settingsPanelLayout.setHorizontalGroup(
+            settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(settingsPanelLayout.createSequentialGroup()
+                .addGap(268, 268, 268)
+                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(3764, Short.MAX_VALUE))
+        );
+        settingsPanelLayout.setVerticalGroup(
+            settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(settingsPanelLayout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(539, Short.MAX_VALUE))
+        );
+
+        Parent.add(settingsPanel, "settingsPanel");
 
         jPanel1.add(Parent, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 116, 4450, 890));
 
@@ -5870,7 +6400,7 @@ public class Generator extends javax.swing.JFrame {
         ind_7.setOpaque(true);
         resetColor(new JPanel[]{d_btn_1, d_btn_3, d_btn_4, d_btn_5, d_btn_6, d_btn_2, d_btn_8, d_btn_9, d_btn_10}, new JPanel[]{ind_1, ind_3, ind_4, ind_5, ind_6, ind_2, ind_8, ind_9, ind_10});
         Parent.removeAll();
-        Parent.add(timetablesPanel);
+        Parent.add(new lec_timetables());
         Parent.repaint();
         Parent.revalidate();
     }//GEN-LAST:event_d_btn_7MouseClicked
@@ -5892,7 +6422,7 @@ public class Generator extends javax.swing.JFrame {
         ind_10.setOpaque(true);
         resetColor(new JPanel[]{d_btn_1, d_btn_3, d_btn_4, d_btn_5, d_btn_6, d_btn_7, d_btn_8, d_btn_9, d_btn_2}, new JPanel[]{ind_1, ind_3, ind_4, ind_5, ind_6, ind_7, ind_8, ind_9, ind_2});
         Parent.removeAll();
-        Parent.add(new settingsPanel());
+        Parent.add(settingsPanel);
         Parent.repaint();
         Parent.revalidate();
     }//GEN-LAST:event_d_btn_10MouseClicked
@@ -7910,6 +8440,92 @@ public class Generator extends javax.swing.JFrame {
         Parent.revalidate();
     }//GEN-LAST:event_jLabel51MouseClicked
 
+    private void jLabel108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel108MouseClicked
+        // TODO add your handling code here:
+        setColor(d_btn_10);
+        ind_10.setOpaque(true);
+        resetColor(new JPanel[]{d_btn_1, d_btn_3, d_btn_4, d_btn_5, d_btn_6, d_btn_7, d_btn_8, d_btn_9, d_btn_2}, new JPanel[]{ind_1, ind_3, ind_4, ind_5, ind_6, ind_7, ind_8, ind_9, ind_2});
+        Parent.removeAll();
+        Parent.add(settingsPanel);
+        Parent.repaint();
+        Parent.revalidate();
+    }//GEN-LAST:event_jLabel108MouseClicked
+
+    private void jLabel108MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel108MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel108MouseEntered
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        setColor(d_btn_10);
+        ind_10.setOpaque(true);
+        resetColor(new JPanel[]{d_btn_1, d_btn_3, d_btn_4, d_btn_5, d_btn_6, d_btn_7, d_btn_8, d_btn_9, d_btn_2}, new JPanel[]{ind_1, ind_3, ind_4, ind_5, ind_6, ind_7, ind_8, ind_9, ind_2});
+        Parent.removeAll();
+        Parent.add(notAvailable_lecturers);
+        Parent.repaint();
+        Parent.revalidate();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jLabel114MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel114MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel114MouseClicked
+
+    private void jLabel114MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel114MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel114MouseEntered
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Parent.removeAll();
+        Parent.add(notAvailableTimes);
+        Parent.repaint();
+        Parent.revalidate();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void tuesdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tuesdayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tuesdayActionPerformed
+
+    private void wds_fourth_hrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wds_fourth_hrsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wds_fourth_hrsActionPerformed
+
+    private void wds_fourth_ndaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wds_fourth_ndaysActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wds_fourth_ndaysActionPerformed
+
+    private void up_fridayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_fridayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_up_fridayActionPerformed
+
+    private void up_tuesdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_tuesdayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_up_tuesdayActionPerformed
+
+    private void up_saturdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_saturdayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_up_saturdayActionPerformed
+
+    private void wds_fourth_minsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wds_fourth_minsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wds_fourth_minsActionPerformed
+
+    private void wds_fourth_slotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wds_fourth_slotActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wds_fourth_slotActionPerformed
+
     public class Function {
 
         Connection con = null;
@@ -8028,16 +8644,16 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JTextField capacity1;
     private javax.swing.JLabel capacityEditLabel;
     private javax.swing.JLabel capacityLabel;
-    public javax.swing.JPanel d_btn_1;
-    public javax.swing.JPanel d_btn_10;
-    public javax.swing.JPanel d_btn_2;
-    public javax.swing.JPanel d_btn_3;
-    public javax.swing.JPanel d_btn_4;
-    public javax.swing.JPanel d_btn_5;
-    public javax.swing.JPanel d_btn_6;
-    public javax.swing.JPanel d_btn_7;
-    public javax.swing.JPanel d_btn_8;
-    public javax.swing.JPanel d_btn_9;
+    private javax.swing.JPanel d_btn_1;
+    private javax.swing.JPanel d_btn_10;
+    private javax.swing.JPanel d_btn_2;
+    private javax.swing.JPanel d_btn_3;
+    private javax.swing.JPanel d_btn_4;
+    private javax.swing.JPanel d_btn_5;
+    private javax.swing.JPanel d_btn_6;
+    private javax.swing.JPanel d_btn_7;
+    private javax.swing.JPanel d_btn_8;
+    private javax.swing.JPanel d_btn_9;
     private javax.swing.JPanel dataVisualization;
     private javax.swing.JPanel data_visualization;
     private javax.swing.JButton delBuild;
@@ -8062,39 +8678,44 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JLabel groupLecLabelIcon;
     private javax.swing.JPanel groupNumbers;
     private javax.swing.JPanel group_lecturers;
-    public javax.swing.JPanel ind_1;
-    public javax.swing.JPanel ind_10;
-    public javax.swing.JPanel ind_2;
-    public javax.swing.JPanel ind_3;
-    public javax.swing.JPanel ind_4;
-    public javax.swing.JPanel ind_5;
-    public javax.swing.JPanel ind_6;
-    public javax.swing.JPanel ind_7;
-    public javax.swing.JPanel ind_8;
-    public javax.swing.JPanel ind_9;
+    private javax.swing.JPanel ind_1;
+    private javax.swing.JPanel ind_10;
+    private javax.swing.JPanel ind_2;
+    private javax.swing.JPanel ind_3;
+    private javax.swing.JPanel ind_4;
+    private javax.swing.JPanel ind_5;
+    private javax.swing.JPanel ind_6;
+    private javax.swing.JPanel ind_7;
+    private javax.swing.JPanel ind_8;
+    private javax.swing.JPanel ind_9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton17_17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton20_20;
+    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton23_23;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -8118,21 +8739,34 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel105_105;
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107_107;
+    private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel108_108;
+    private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel109_109;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel110_110;
+    private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel111_111;
+    private javax.swing.JLabel jLabel112;
     private javax.swing.JLabel jLabel112_112;
+    private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel113_113;
+    private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel114_114;
+    private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel115_115;
+    private javax.swing.JLabel jLabel116;
     private javax.swing.JLabel jLabel116_116;
+    private javax.swing.JLabel jLabel117;
     private javax.swing.JLabel jLabel117_117;
+    private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel118_118;
+    private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel119_119;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel120_120;
+    private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel121_121;
     private javax.swing.JLabel jLabel122_122;
     private javax.swing.JLabel jLabel123_123;
@@ -8199,6 +8833,7 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
@@ -8283,10 +8918,17 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
     private javax.swing.JPanel jPanel36_36;
+    private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel37_37;
+    private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel38_38;
+    private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
@@ -8337,6 +8979,8 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JPanel location_details;
     private javax.swing.JPanel location_sessions;
     private javax.swing.JCheckBox monday;
+    private javax.swing.JPanel notAvailableTimes;
+    private javax.swing.JPanel notAvailable_lecturers;
     private javax.swing.JPanel notAvailable_session;
     private javax.swing.JPanel panelChart;
     private javax.swing.JPanel parent_wds;
@@ -8386,6 +9030,7 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JButton searchBuild;
     private javax.swing.JLabel searchBuildInEditLabel;
     private javax.swing.JPanel sessionsPanel;
+    private javax.swing.JPanel settingsPanel;
     private javax.swing.JButton statisticBtn;
     private javax.swing.JLabel statisticImage;
     private javax.swing.JLabel statisticTitel;
@@ -8435,6 +9080,7 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JLabel wds_fourth_mins_lbl;
     private javax.swing.JComboBox<String> wds_fourth_ndays;
     private javax.swing.JLabel wds_fourth_no_lbl;
+    private javax.swing.JPanel wds_fourth_pn;
     private javax.swing.JComboBox<String> wds_fourth_slot;
     private javax.swing.JLabel wds_fourth_slot_lbl;
     private javax.swing.JLabel wds_fourth_tid_lbl;
@@ -8451,6 +9097,7 @@ public class Generator extends javax.swing.JFrame {
     private javax.swing.JLabel wds_sec_mins_lbl;
     private javax.swing.JComboBox<String> wds_sec_ndays;
     private javax.swing.JLabel wds_sec_no_lbl;
+    private javax.swing.JPanel wds_sec_pn;
     private javax.swing.JComboBox<String> wds_sec_slot;
     private javax.swing.JLabel wds_sec_slot_lbl;
     private javax.swing.JLabel wds_sec_time_lbl;
