@@ -10,6 +10,8 @@ package timetable;
  * @author HP
  */
 public class timetable_main extends javax.swing.JPanel {
+    
+      Generator generator;
 
     /**
      * Creates new form timetable_main
@@ -30,7 +32,7 @@ public class timetable_main extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        wds_grouptt_main_btn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -49,8 +51,13 @@ public class timetable_main extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/calendar.png"))); // NOI18N
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton1.setText("GROUP TIMETABLES");
+        wds_grouptt_main_btn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        wds_grouptt_main_btn.setText("GROUP TIMETABLES");
+        wds_grouptt_main_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wds_grouptt_main_btnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -62,7 +69,7 @@ public class timetable_main extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(34, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(wds_grouptt_main_btn)
                 .addGap(30, 30, 30))
         );
         jPanel1Layout.setVerticalGroup(
@@ -71,7 +78,7 @@ public class timetable_main extends javax.swing.JPanel {
                 .addGap(35, 35, 35)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(wds_grouptt_main_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65))
         );
 
@@ -170,9 +177,17 @@ public class timetable_main extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void wds_grouptt_main_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wds_grouptt_main_btnActionPerformed
+        // TODO add your handling code here:
+        generator.Parent.removeAll();
+        generator.Parent.add(new lec_timetables());
+        generator.Parent.repaint();
+        generator.Parent.revalidate();
+        
+    }//GEN-LAST:event_wds_grouptt_main_btnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
@@ -182,5 +197,6 @@ public class timetable_main extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton wds_grouptt_main_btn;
     // End of variables declaration//GEN-END:variables
 }
