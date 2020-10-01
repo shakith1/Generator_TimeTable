@@ -48,6 +48,10 @@ public class Generator extends javax.swing.JFrame {
     view_lecturers view_lecturers;
     lecturer_add lecturer_add;
     lec_timetables lec_timetables;
+    rooms_tags_mem4 rooms_tags_mem4;
+    locAllo_groups locAllo_groups;
+    locAllo_sessions locAllo_sessions;
+    locationReservation locationReservation;
 
     /**
      * Creates new form Generator
@@ -6933,19 +6937,37 @@ public class Generator extends javax.swing.JFrame {
     }//GEN-LAST:event_statisticBtnActionPerformed
 
     private void groupAndLecBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_groupAndLecBtnActionPerformed
-        // TODO add your handling code here:
+        
+        Parent.removeAll();
+        Parent.add(new locAllo_groups());
+        Parent.repaint();
+        Parent.revalidate();
+                
     }//GEN-LAST:event_groupAndLecBtnActionPerformed
 
     private void reservationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reservationBtnActionPerformed
-        // TODO add your handling code here:
+        
+        Parent.removeAll();
+        Parent.add(new locationReservation());
+        Parent.repaint();
+        Parent.revalidate();
     }//GEN-LAST:event_reservationBtnActionPerformed
 
     private void alloAndSessionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alloAndSessionBtnActionPerformed
-        // TODO add your handling code here:
+        
+        Parent.removeAll();
+        Parent.add(new locAllo_sessions());
+        Parent.repaint();
+        Parent.revalidate();
+        
     }//GEN-LAST:event_alloAndSessionBtnActionPerformed
 
     private void groupAndTagBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_groupAndTagBtnActionPerformed
-        // TODO add your handling code here:
+           
+        Parent.removeAll();
+        Parent.add(new rooms_tags_mem4());
+        Parent.repaint();
+        Parent.revalidate();
     }//GEN-LAST:event_groupAndTagBtnActionPerformed
 
     private void add_subsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_subsActionPerformed
