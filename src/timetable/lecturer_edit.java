@@ -16,6 +16,8 @@ import javax.swing.JOptionPane;
 public class lecturer_edit extends javax.swing.JPanel {
 
     Generator generator;
+    String name;
+    String age;
 
     Connection con = null;
 
@@ -436,7 +438,7 @@ public class lecturer_edit extends javax.swing.JPanel {
         } else {
 
             le1.setEditable(false);
-            JOptionPane.showMessageDialog(this, "Enter Only Letters!");
+            //JOptionPane.showMessageDialog(this, "Enter Only Letters!");
 
         }
     }//GEN-LAST:event_le1KeyPressed
@@ -460,8 +462,9 @@ public class lecturer_edit extends javax.swing.JPanel {
         int level = Integer.parseInt(le6.getSelectedItem().toString());
 
         //concatenate the  values of level and id textfields
-        String rank = level + "." + id;
+        //String rank = level + "." + id;
 
+        
         le7.setText("" + rank);
     }//GEN-LAST:event_jButton14_14ActionPerformed
 
