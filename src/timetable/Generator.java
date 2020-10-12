@@ -42,7 +42,7 @@ public class Generator extends javax.swing.JFrame {
 
     int r;
 
-    public String anum, pnum, dnum, snum, tnum;
+    public String anum, pnum, dnum, snum, tnum, num;
     public int id1, id2, id3, id4, id5;
     
     view_lecturers view_lecturers;
